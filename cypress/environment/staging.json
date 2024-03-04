@@ -1,0 +1,17 @@
+{
+
+"env" : {
+
+    "appUrl" : "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+    "appUserName" : "Admin",
+    "appPassword" : "admin123"
+
+}
+
+
+
+
+
+
+
+}

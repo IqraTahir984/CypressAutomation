@@ -1,0 +1,24 @@
+{
+    
+
+    "adminData" : {
+
+
+    "empname" : "a",
+    "empusername" : "abcde",
+    "emppassword":"abc1234",
+    "empconfirmpass" : "abc1234"
+
+    },
+
+
+    "pimData" : {
+        
+
+        "clickpimid" : "0245"
+
+
+    }
+
+
+}
