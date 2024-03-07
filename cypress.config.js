@@ -15,16 +15,21 @@ function setupNodeEvents(on, config) {
 
   return configData;
 }
+
 module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
       return setupNodeEvents(on, config)
-      // implement node event listeners here
     },
-specPattern: "cypress/e2e/*.js"
-
-
-
-
+    specPattern: "cypress/e2e/*.js"
   },
+  reporter: "mochawesome",
+  reporterOptions: {
+    reportDir: "cypress/reports",
+    charts: true,
+    overwrite: false,
+    html: true,
+    json: true
+  }
 });
+

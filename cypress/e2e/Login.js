@@ -1,19 +1,21 @@
 import Login from "../Pages/Loginpage"
 import AddEmploye from "../Pages/AddingEmploye"
 import PIM from "../Pages/PIM"
-import { randomName } from "../Utils/utilis"
+import { randomName,userName1 } from "../Utils/utilis"
 
 
 const loginpage = new Login
 const emp = new AddEmploye
 const pim = new PIM
 const employeName = randomName()
+const employeName1 = userName1()
 
 describe("Orangehrm",function(){
 
  beforeEach (()=>{
 
     cy.visit(Cypress.env('appUrl'))
+    cy.screenshot('orangehrmlive');
     // cy.url().should('include','orangehrmlive.com').and('contain','orangehrmlive.com')
     // cy.title().should('include', 'OrangeHRM')
     loginpage.typeusername(Cypress.env('appUserName'))
@@ -28,7 +30,7 @@ it("addingemploye",function(){
     emp.clickuserrole()
     emp.clickempname(this.testdata.adminData.empname)
     emp.clickstatus()
-    emp.clikusername(employeName)
+    emp.clikusername(employeName1)
     emp.clickpassword(this.testdata.adminData.emppassword)
     emp.clickconfirmpassword(this.testdata.adminData.empconfirmpass)
     emp.clicksavebtn()

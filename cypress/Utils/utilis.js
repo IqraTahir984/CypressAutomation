@@ -8,19 +8,22 @@ export const randomName = ()=>{
     return `dummy${id}`
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+export const userName1 = () => {
+    const alphabet = "abcdefghijklmnopqrstuvwxyz";
+    let randomString = "";
+
+    for (let i = 0; i < 5; i++) {
+        const randomIndex = Cypress._.random(0, alphabet.length - 1);
+        randomString += alphabet[randomIndex];
+    }
+
+    return randomString;
+}
+
+
+
+
+
+    
